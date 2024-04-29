@@ -16,7 +16,7 @@ public class LeafGroundbutton {
 		driver.manage().window().maximize();
 
 		driver.findElement(By.id("j_idt88:j_idt90")).click();
-		driver.navigate().back();
+		
 		//Thread.sleep(2000);
 		//Checking title
 		String title = driver.getTitle();
@@ -27,7 +27,7 @@ public class LeafGroundbutton {
 		{System.out.println("Title is incorrect");}
 
 		//Check the button Confirm is disabled. 
-
+driver.navigate().back();
 		boolean buttonEnabled=false;
 		buttonEnabled=driver.findElement(By.id("j_idt88")).isEnabled();
 
@@ -42,7 +42,7 @@ public class LeafGroundbutton {
 		{System.out.println("The position of the button is: "+buttonLoc);
 		}
 
-		//‘Find the Save button background color
+		//â€˜Find the Save button background color
 
 		String btncolor = driver.findElement(By.id("j_idt88:j_idt96")).getCssValue("color");
 		System.out.println("Colour of the save button is "+btncolor);
